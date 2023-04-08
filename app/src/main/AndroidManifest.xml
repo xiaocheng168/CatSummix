@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cc.mcyx.catsummix"
+    android:versionCode="1"
+    android:versionName="1.1">
+
+    <uses-sdk android:minSdkVersion="15" />
+
+    <application
+        android:allowBackup="true"
+        android:enabled="false"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.CatSummix"
+        tools:targetApi="31">
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="A Xposed Module for Pc Connect~~~ovo~" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="53" />
+    </application>
+
+</manifest>
