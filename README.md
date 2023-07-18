@@ -1,16 +1,17 @@
-# CatSummix
-An For You PC Connection the module
+<div align="center">
+    <img width="200" height="200" src="application.ico" alt="Logo" style="margin: 0 auto">
+    <h1>CatSummixPC</h1>
+    <br>
+</div>
 
-## About The Application
-~~~
-This is Android(Phone) And Windows(PC) Message Channel
-~~~
-## Now Function
-~~~
- * Phone Copy Text Send To PC
-~~~
+## Support Systems ⭐
 
-### Download Now
-<ClickTo>[Release](https://github.com/xiaocheng168/CatSummix/releases)
+    ✅ Android 
+    ❌ Linux 
+    ❌ Macos 
 
-# The project license MIT
+#### Project icon from the <a target=”_blank“ href="https://www.pixiv.net/artworks/92923145">pixiv<a/>
+
+### Now download <a href="https://github.com/xiaocheng168/CatSummix/releases">releases</a> 🫲
+
+#### kokomi ✈️!!!
