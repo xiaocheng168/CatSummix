@@ -7,8 +7,6 @@
 ## Support Systems ⭐
 
     ✅ Android 
-    ❌ Linux 
-    ❌ Macos 
 
 #### Project icon from the <a target=”_blank“ href="https://www.pixiv.net/artworks/92923145">pixiv<a/>
 
