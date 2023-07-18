@@ -7,7 +7,7 @@ import java.util.*
 import kotlin.random.Random
 
 //传输数据层 UDP!!!
-class MainNetwork {
+class LanNetwork {
     companion object {
         //广播地址
         @JvmStatic
@@ -17,19 +17,28 @@ class MainNetwork {
         @JvmStatic
         val sendPort = 3333
 
+        @JvmStatic
+        lateinit var datagramSocket: DatagramSocket
+
+        init {
+            initUdpService()
+        }
+
+        @JvmStatic
+        fun initUdpService() {
+            //UDP客户端监听
+            while (true) try {
+                datagramSocket =
+                    DatagramSocket(Random(System.currentTimeMillis()).nextInt(1, 65535) + 1)
+                break
+            } catch (_: java.lang.Exception) {
+            }
+        }
+
         //发送字节数据包
         @JvmStatic
         @Synchronized
         fun sendPacket(byteArray: ByteArray, host: String = sendHost, port: Int = sendPort) {
-            //UDP客户端监听
-            val datagramSocket: DatagramSocket
-            try {
-                datagramSocket =
-                    DatagramSocket(Random(System.currentTimeMillis()).nextInt(65535) + 1)
-            } catch (e: java.lang.Exception) {
-                sendPacket(byteArray, host, port)
-                return
-            }
             datagramSocket.send(
                 DatagramPacket(
                     byteArray,
@@ -37,8 +46,6 @@ class MainNetwork {
                     InetSocketAddress(host, port)
                 )
             )
-            datagramSocket.close()
-
         }
 
         //发送文本数据包
@@ -55,11 +62,17 @@ class MainNetwork {
             }
         }
 
+        //发送IPacket数据包
+        fun sendPacket(string: String, host: String = sendHost, port: Int = sendPort) {
+            
+        }
+
         /**
          * 获取ip地址
          * @return
          */
-        private fun getHostIP(): String? {
+        @JvmStatic
+        fun getHostIP(): String? {
             var hostIp: String? = null
             try {
                 val nis = NetworkInterface.getNetworkInterfaces()

@@ -1,28 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="cc.mcyx.catsummix"
-    android:versionCode="1"
-    android:versionName="1.1">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="cc.mcyx.catsummix"
+          android:versionCode="1"
+          android:versionName="1.1">
 
-    <uses-sdk android:minSdkVersion="15" />
+    <uses-sdk android:minSdkVersion="15"/>
+
+    <!--  蓝牙网关处理 开关、扫描蓝牙 权限签名  -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 
     <application
         android:allowBackup="true"
-        android:enabled="false"
+        android:enabled="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.CatSummix"
-        tools:targetApi="31">
+        tools:targetApi="32">
         <meta-data
             android:name="xposedmodule"
-            android:value="true" />
+            android:value="true"/>
         <meta-data
             android:name="xposeddescription"
-            android:value="A Xposed Module for Pc Connect~~~ovo~" />
+            android:value="A Xposed Module for Pc Connect~~~ovo~"/>
         <meta-data
             android:name="xposedminversion"
-            android:value="53" />
+            android:value="53"/>
+
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
     </application>
 
 </manifest>

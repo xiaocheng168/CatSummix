@@ -1,8 +1,9 @@
 package cc.mcyx.catsummix.network.packet
 
-class PacketCopyText(text: String) : ImplPacketBase() {
+class PacketCopyText(text: String = "", encode: Boolean) : ImplPacketBase() {
     init {
-        setData(text)
-        setType(1)
+        this.setEncode(encode)
+        this.setData(text)
+        this.setType(1)
     }
 }
