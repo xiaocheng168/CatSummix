@@ -10,6 +10,8 @@
 
 #### Project icon from the <a target=”_blank“ href="https://www.pixiv.net/artworks/92923145">pixiv<a/>
 
-### Now download <a href="https://github.com/xiaocheng168/CatSummix/releases">releases</a> 🫲
+### Now download for Android <a href="https://github.com/xiaocheng168/CatSummix/releases">releases</a> 🫲
+
+### Now download for PC <a href="https://github.com/xiaocheng168/CatSummixPC/releases">releases</a> 🫲
 
 #### kokomi ✈️!!!
