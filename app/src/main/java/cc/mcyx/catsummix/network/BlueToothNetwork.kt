@@ -9,6 +9,7 @@ import android.content.IntentFilter
 import cc.mcyx.catsummix.MainInject
 import de.robv.android.xposed.XposedBridge
 
+@Deprecated("这是一个未开放的 传输方式")
 //蓝牙网关 处理
 class BlueToothNetwork {
     //获取蓝牙网关处理
