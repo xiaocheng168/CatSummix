@@ -7,6 +7,7 @@ import java.util.*
 import kotlin.random.Random
 
 //传输数据层 UDP!!!
+//这里监听的端口，均为随机！
 class LanNetwork {
     companion object {
         //广播地址
@@ -60,11 +61,6 @@ class LanNetwork {
                 }
             } catch (_: java.lang.Exception) {
             }
-        }
-
-        //发送IPacket数据包
-        fun sendPacket(string: String, host: String = sendHost, port: Int = sendPort) {
-            
         }
 
         /**
