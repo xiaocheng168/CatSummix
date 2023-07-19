@@ -29,7 +29,7 @@ abstract class ImplPacketBase(encode: Boolean = false) : IPacket, JSONObject() {
     //设置是否加密数据
     fun setEncode(b: Boolean = true): ImplPacketBase {
         this.encode = b
-            this["encode"] = "1"
+        this["encode"] = true
         return this
     }
 
@@ -61,7 +61,7 @@ abstract class ImplPacketBase(encode: Boolean = false) : IPacket, JSONObject() {
     /**
      * 监听Udp数据包回调
      * @author Zcc
-     * @param timeout 有效时间
+     * @param timeout 有效时间 (ms)
      * @param onPacketReceive 回调数据
      *
      * 为了节省资源，有效时间不要大于 10 秒
@@ -117,7 +117,11 @@ abstract class ImplPacketBase(encode: Boolean = false) : IPacket, JSONObject() {
     }
 
     protected fun setData(d: JSONObject) {
-        this["d"] = d
+        this["d"] = if (this.encode) {
+            Code.enCodeRc4Base64(d.toString())
+        } else {
+            d
+        }
     }
 
     fun put(key: String, data: String): ImplPacketBase {
