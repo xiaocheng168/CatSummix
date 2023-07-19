@@ -11,7 +11,6 @@ import cc.mcyx.catsummix.code.Code
 import cc.mcyx.catsummix.network.packet.ImplPacketBase
 import cc.mcyx.catsummix.network.packet.PacketBindDrive
 import cc.mcyx.catsummix.network.packet.PacketScanDriver
-import cn.hutool.crypto.symmetric.RC4
 import com.alibaba.fastjson.JSONObject
 import java.util.Timer
 import java.util.TimerTask
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                     send().apply {
                         val timeout = 10 * 1000
                         listener(timeout, object : ImplPacketBase.OnPacketReceive {
-                            override fun onMessage(jsonObject: JSONObject, ip: String, port: Int) {
+                            override fun onMessage(jsonObject: JSONObject, ipaddress: String, port: Int) {
                                 val builder = AlertDialog.Builder(this@MainActivity)
                                 Looper.prepare()
                                 val message =
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                                     "连!"
                                 ) { dialogInterface, i ->
                                     run {
-                                        PacketBindDrive(Code.key).send(ip, port)
+                                        PacketBindDrive(Code.key).send(ipaddress, port)
                                     }
                                 }
                                 builder.setNegativeButton("不连", null)
