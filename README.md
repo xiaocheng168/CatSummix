@@ -15,7 +15,7 @@
 
 ## There are functional
 
-    ✅ Copy to Computer 
+    ✅ Copy Text to Computer 
 
     ✅ Drop File to Computer
 
