@@ -1,13 +1,11 @@
 package cc.mcyx.catsummix.network.packet
 
 import android.os.Build
-import androidx.annotation.RequiresApi
 import cc.mcyx.catsummix.code.Code
 import cc.mcyx.catsummix.network.LanNetwork
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
 import java.net.DatagramPacket
-import java.net.DatagramSocket
 import java.util.Base64
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -130,7 +128,11 @@ abstract class ImplPacketBase(encode: Boolean = false) : IPacket, JSONObject() {
     }
 
 
-    interface OnPacketReceive {
-        fun onMessage(jsonObject: JSONObject, ipaddress: String, port: Int)
+    abstract class OnPacketReceive {
+
+        lateinit var any: Any
+
+
+        abstract fun onMessage(jsonObject: JSONObject, ipaddress: String, port: Int)
     }
 }
