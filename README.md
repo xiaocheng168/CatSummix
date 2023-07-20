@@ -4,9 +4,21 @@
     <br>
 </div>
 
+## About the project ❤️
+
+    the project is an computer with android phone message channel
+    thank you seeing the project page
+
 ## Support Systems ⭐
 
     ✅ Android 
+
+## There are functional
+
+    ✅ Copy to Computer 
+
+    ✅ Drop File to Computer
+
 
 #### Project icon from the <a target=”_blank“ href="https://www.pixiv.net/artworks/92923145">pixiv<a/>
 
