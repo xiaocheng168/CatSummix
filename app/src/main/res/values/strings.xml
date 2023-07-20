@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CatSummix</string>
     <string name="scan_drivers">扫描可互联设备</string>
+    <string name="status_text">我在等待中</string>
 </resources>
