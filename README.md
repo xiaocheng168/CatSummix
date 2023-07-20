@@ -6,7 +6,7 @@
 
 ## About the project ❤️
 
-    the project is an computer with android phone message channel
+    This project is a channel for Android and computer messages
     thank you seeing the project page
 
 ## Support Systems ⭐
