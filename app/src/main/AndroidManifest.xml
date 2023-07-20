@@ -8,8 +8,13 @@
     <uses-sdk android:minSdkVersion="15"/>
 
     <!--  蓝牙网关处理 开关、扫描蓝牙 权限签名  -->
-    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <!--    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>-->
+    <!--    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>-->
+
+    <!--  文件读写操作  -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -49,6 +54,7 @@
                 <data android:mimeType="*/*"/>
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
