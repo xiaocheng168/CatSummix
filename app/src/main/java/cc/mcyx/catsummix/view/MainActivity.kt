@@ -32,8 +32,12 @@ class MainActivity : AppCompatActivity() {
                     //发送数据包
                     send().apply {
                         val timeout = 10 * 1000
-                        listener(timeout, object : ImplPacketBase.OnPacketReceive {
-                            override fun onMessage(jsonObject: JSONObject, ipaddress: String, port: Int) {
+                        listener(timeout, object : ImplPacketBase.OnPacketReceive() {
+                            override fun onMessage(
+                                jsonObject: JSONObject,
+                                ipaddress: String,
+                                port: Int
+                            ) {
                                 val builder = AlertDialog.Builder(this@MainActivity)
                                 Looper.prepare()
                                 val message =
